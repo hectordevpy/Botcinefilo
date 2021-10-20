@@ -31,7 +31,7 @@ def run():
         print(f"🎥{title} - {year}")
         print(f"🌟Rating: {rating}")
         # direcStr = " ".join(map(str,directors))
-        # print(f"directors: {direcStr}") #
+        # print(f"directors: {direcStr}") 
 
 
 if __name__ == "__main__":
