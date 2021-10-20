@@ -3,11 +3,6 @@ import schedule
 import time
 import imdb
 
-consumer_key = "taPM56wXc4ZHeSXu5pBniXYCb"
-consumer_secret = "lw7pKTTKQsGZLC8W5xDp02DufpMwun2RHW2a3M0hQ3mdIZpiaY"
-
-key = "1447766124314169355-AKyBVNfAL8eM40GFOOERVCDdzEYS9Y"
-secret = "xoUhCOid3nkZhvN10IK7KneRKqzG48kfESwSPfCavsCjD"
 
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(key, secret)
