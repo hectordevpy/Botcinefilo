@@ -2,12 +2,14 @@ import tweepy
 import schedule
 import time
 import imdb
+from dotenv import load_dotenv
+import os
 
-consumer_key = "taPM56wXc4ZHeSXu5pBniXYCb"
-consumer_secret = "lw7pKTTKQsGZLC8W5xDp02DufpMwun2RHW2a3M0hQ3mdIZpiaY"
+consumer_key = os.getenv('consumer_key')
+consumer_secret = os.getenv('consumer_secret')
 
-key = "1447766124314169355-AKyBVNfAL8eM40GFOOERVCDdzEYS9Y"
-secret = "xoUhCOid3nkZhvN10IK7KneRKqzG48kfESwSPfCavsCjD"
+key = os.getenv('key')
+secret = os.getenv('secret')
 
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(key, secret)
