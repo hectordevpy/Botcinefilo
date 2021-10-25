@@ -5,11 +5,14 @@ import imdb
 from dotenv import load_dotenv
 import os
 
+<<<<<<< HEAD
 consumer_key = os.getenv('consumer_key')
 consumer_secret = os.getenv('consumer_secret')
 
 key = os.getenv('key')
 secret = os.getenv('secret')
+=======
+>>>>>>> a691813e790b36b14931743bb4cf6afd649107aa
 
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(key, secret)
