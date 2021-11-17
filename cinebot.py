@@ -65,7 +65,7 @@ for movie in top_1:
     title = movie["title"]
     year = movie["year"]
     rating = movie["rating"]
-best_movie = str(f"🎥 {title} - {year} ") + str(f" 🌟 rating: {rating}")
+best_movie = str(f"🎥 {title} - {year} ") + str(f" 🌟 IMDb rating: {rating}")
 
 def reply_best_movies(tweet):
     api.update_status("@" + tweet.user.screen_name +  " Te recomiendo esta película 😁 : " + best_movie, tweet.id)
