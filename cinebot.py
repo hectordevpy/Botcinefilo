@@ -35,7 +35,7 @@ def tuitear():
 
 #Retweet topics
 def retweet(hashtag,api):
-    for tweet in tweepy.Cursor(api.search, q=(hashtag)).items(10):
+    for tweet in tweepy.Cursor(api.search(), q=(hashtag)).items(10):
         try:
             tweet.retweet()
             time.sleep(60)
