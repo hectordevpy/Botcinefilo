@@ -8,6 +8,8 @@ from dotenv import load_dotenv
 import os
 import random
 
+inicio = time.time()
+
 #Check keys
 load_dotenv()
 API_KEY = os.getenv('API_key')
@@ -35,7 +37,7 @@ def tuitear():
 
 #Retweet topics
 def retweet(hashtag,api):
-    for tweet in tweepy.Cursor(api.search_tweets, q=(hashtag)).items(10):
+    for tweet in tweepy.Cursor(api.search_tweets, q=(hashtag)).items(10):If you are using Tweepy v4.x then the method is now api.search_tweets.
         try:
             tweet.retweet()
             time.sleep(60)
@@ -109,9 +111,3 @@ for subject in subjects:
 
 if __name__ == '__main__':
     run()
-
-
-
-
-
-
