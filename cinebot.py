@@ -37,10 +37,10 @@ def tuitear():
 
 #Retweet topics
 def retweet(hashtag,api):
-    for tweet in tweepy.Cursor(api.search_tweets, q=(hashtag)).items(10):If you are using Tweepy v4.x then the method is now api.search_tweets.
+    for tweet in tweepy.Cursor(api.search, q=(hashtag)).items(10):
         try:
             tweet.retweet()
-            time.sleep(60)
+            time.sleep(5)
         except:
             print("Can't retweet  "+str(tweet.id)+" by user"+tweet.user.screen_name)
 #Read mentions
@@ -111,3 +111,6 @@ for subject in subjects:
 
 if __name__ == '__main__':
     run()
+
+fin = time.time()
+print(fin - inicio)
