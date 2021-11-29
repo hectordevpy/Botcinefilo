@@ -43,6 +43,7 @@ def retweet(hashtag,api):
             time.sleep(2)
         except:
             print("Can't retweet  "+str(tweet.id)+" by user"+tweet.user.screen_name)
+            
 #Read mentions
 def read_last_id():
     file = open("last_id.txt", "r")
