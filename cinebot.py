@@ -40,7 +40,7 @@ def retweet(hashtag,api):
     for tweet in tweepy.Cursor(api.search, q=(hashtag)).items(10):
         try:
             tweet.retweet()
-            time.sleep(5)
+            time.sleep(2)
         except:
             print("Can't retweet  "+str(tweet.id)+" by user"+tweet.user.screen_name)
 #Read mentions
@@ -92,7 +92,7 @@ def check_mentions():
 
 def run():
     
-    schedule.every(7).seconds.do(check_mentions)
+    schedule.every(5).seconds.do(check_mentions)
     schedule.every().day.at("06:02").do(tuitear)
     schedule.every().day.at("14:02").do(tuitear)
     schedule.every().day.at("22:02").do(tuitear)
