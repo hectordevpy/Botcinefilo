@@ -70,7 +70,7 @@ for movie in top_1:
 best_movie = str(f"🎥 {title} - {year} ") + str(f" 🌟 IMDb rating: {rating}")
 
 def reply_best_movies(tweet):
-    api.update_status("@" + tweet.user.screen_name +  " Te recomiendo esta película 😁 : " + best_movie, tweet.id)
+    api.update_status("@" + tweet.user.screen_name +  " Te recomiendo: " + best_movie, tweet.id)
     store_last_id(tweet.id) 
 
 #reply and block trolls
